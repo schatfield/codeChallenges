@@ -98,7 +98,7 @@ function questionMarks(string) {
     
   }
 
-  summation(num);
+  //summation(num);
 
   // Not working yet
   function towerBuilder(nFloors) {
@@ -118,12 +118,17 @@ function questionMarks(string) {
     return tower;
   }
 
+
+  const array = [1,3,4,6,5,7,8];
+
   function sortArray(array) {
+    //store the odd numbers and sort them?
+
     //check each number in the array is odd or even
     array.forEach(index => {
-      if (index % 2 === 0 ) {
+      if (index % 2 === 1) {
         //if odd, aort in ascending order around the even numbers
-
+        console.log(index);
       }
     })
     // Return a sorted array.
