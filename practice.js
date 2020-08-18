@@ -122,23 +122,21 @@ function questionMarks(string) {
   const array = [7,5,4,6,3,1,8];
 
   function sortArray(array) {
-    //store the odd numbers and sort them?
-    //let odd = [];
-
+    
+    let oddArray = [];
     function sortOdd(a, b) {
       return a - b;
     }
     //check each number in the array is odd or even
     array.forEach(index => {
-      if (index % 2 === 1) {
+      if (index % 2 ===1) {
         //if odd, push to odd array
         //console.log(index);
-        //odd.push(index);
-        array.sort(sortOdd);
+        oddArray.push(index);
       } else {
-        array.
+         array;
       }
     })
     // Return a sorted array.
-    return array;
+    return oddArray.sort(sortOdd);
   }
