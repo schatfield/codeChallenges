@@ -74,3 +74,57 @@ function questionMarks(string) {
        return args[0];
      }
    }
+
+   
+   function arrayDiff(a, b) {
+     const newArray = [];
+    a.forEach(aEl => {
+      console.log(aEl);
+      b.forEach(bEl => {
+        if (aEl === bEl) {
+          newArray.push(aEl);
+        } 
+      });
+    });
+    return newArray;
+  }
+  
+  // how do we call this? 
+  var summation = function (num) {
+    let result = 0;
+    for (let i = 1; i <= num; i++) {
+      result = i + result;
+    }
+    
+  }
+
+  summation(num);
+
+  // Not working yet
+  function towerBuilder(nFloors) {
+    //empty array to push the end result to
+    let tower = [];
+    //you need something that adds the *s for the floors 
+    let towerBlock = '*';
+    let space = " ".repeat(nFloors - i);
+    //a loop that increments to build the passed in # of floors
+    for (i = 1; i <= nFloors; i++) {
+      //do something
+      towerBlock.repeat(2);
+      console.log(towerBlock);
+    }
+    //you'll need to push the result to your empty array
+    //return your array
+    return tower;
+  }
+
+  function sortArray(array) {
+    //check each number in the array is odd or even
+    array.forEach(index => {
+      if (index % 2 === 0 ) {
+        //if odd, aort in ascending order around the even numbers
+
+      }
+    })
+    // Return a sorted array.
+  }
