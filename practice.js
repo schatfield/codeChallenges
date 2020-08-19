@@ -124,6 +124,7 @@ function questionMarks(string) {
   function sortArray(array) {
     
     let oddArray = [];
+    let evenArray = [];
 
     function sortOdd(a, b) {
       return a - b;
@@ -135,10 +136,12 @@ function questionMarks(string) {
         //if odd, push to odd array
         //console.log(index);
         oddArray.push(index);
-      } 
+      } else {
+        evenArray.push(index);
+      }
     })
 
-    let combined = oddArray.sort(sortOdd).concat(array);
+    let combined = oddArray.sort(sortOdd).concat(evenArray);
     
     // Return a sorted array.
     return combined;
