@@ -124,6 +124,7 @@ function questionMarks(string) {
   function sortArray(array) {
     
     let oddArray = [];
+    let evenArray = [];
 
     function sortOdd(a, b) {
       return a - b;
@@ -135,11 +136,46 @@ function questionMarks(string) {
         //if odd, push to odd array
         //console.log(index);
         oddArray.push(index);
-      } 
+      } else {
+        evenArray.push(index);
+      }
     })
 
-    let combined = oddArray.sort(sortOdd).concat(array);
+    let combined = oddArray.sort(sortOdd).concat(evenArray);
     
     // Return a sorted array.
     return combined;
   }
+
+
+//TASK
+// You have an array of numbers.
+// Your task is to sort ascending odd numbers but even numbers must be on their places.
+
+// Zero isn't an odd number and you don't need to move it. If you have an empty array, you need to return it.
+//EXAMPLE
+//sortArray([5, 3, 2, 8, 1, 4]) == [1, 3, 2, 8, 5, 4]
+
+
+// SOLUTION
+function sortArray2(array) {
+
+  var odd = array.filter(is_odd).sort(ascending);
+  return array.map(replace_odd_inorder);
+
+
+  function ascending(a, b) {
+
+    return a > b;
+  }
+
+  function is_odd(num) {
+
+    return num % 2;
+  }
+
+  function replace_odd_inorder(num) {
+
+    return is_odd(num) ? odd.shift() : num;
+  }
+}
