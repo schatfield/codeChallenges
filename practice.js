@@ -124,19 +124,22 @@ function questionMarks(string) {
   function sortArray(array) {
     
     let oddArray = [];
+
     function sortOdd(a, b) {
       return a - b;
     }
+
     //check each number in the array is odd or even
     array.forEach(index => {
       if (index % 2 ===1) {
         //if odd, push to odd array
         //console.log(index);
         oddArray.push(index);
-      } else {
-         array;
-      }
+      } 
     })
+
+    let combined = oddArray.sort(sortOdd).concat(array);
+    
     // Return a sorted array.
-    return oddArray.sort(sortOdd);
+    return combined;
   }
