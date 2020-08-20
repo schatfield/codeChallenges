@@ -199,7 +199,13 @@ function toCamelCase(string) {
   let newString = string.split(/[-_]/g);
   //let newString = string.replace(/[-_]/g, "");
   console.log(newString);
-   if (newString.inculdes(/[A-Z]/)) {
-     console.log(newString.join(' '));
+   if (newString[0]!== newString[0].toLowerCase()) {
+     console.log(newString.join(''));
    } 
 }
+
+// function isCapital(array) {
+//   array[0] !== array[0].toLowerCase()
+// }
+ 
+// return stringToArray.filter(isCapital);
