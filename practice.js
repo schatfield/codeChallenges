@@ -195,6 +195,8 @@ function sortArray2(array) {
 
 // you'll need to check if the first word of the string was passed in as capitalized. it should stay that way if so
 
+//**** */ I think you're going to need to use map and utilize the args that come with that method includng the array index ****
+
 function toCamelCase(string) {
   let newString = string.split(/[-_]/g);
   //let newString = string.replace(/[-_]/g, "");
