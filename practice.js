@@ -179,3 +179,33 @@ function sortArray2(array) {
     return is_odd(num) ? odd.shift() : num;
   }
 }
+
+
+// Complete the method/function so that it converts dash/underscore delimited words into camel casing. The first word within the output should be capitalized only if the original word was capitalized (known as Upper Camel Case, also often referred to as Pascal case).
+
+// Examples
+// toCamelCase("the-stealth-warrior") // returns "theStealthWarrior"
+
+// TODO:
+// toCamelCase("The_Stealth_Warrior") // returns "TheStealthWarrior"
+
+// you're going to need to replace certain characters with nothing to create camel casing
+
+//you'll need to upper case the first letter of each word as in camel casing
+
+// you'll need to check if the first word of the string was passed in as capitalized. it should stay that way if so
+
+function toCamelCase(string) {
+  let newString = string.split(/[-_]/g);
+  //let newString = string.replace(/[-_]/g, "");
+  console.log(newString);
+   if (newString[0]!== newString[0].toLowerCase()) {
+     console.log(newString.join(''));
+   } 
+}
+
+// function isCapital(array) {
+//   array[0] !== array[0].toLowerCase()
+// }
+ 
+// return stringToArray.filter(isCapital);
