@@ -186,6 +186,7 @@ function sortArray2(array) {
 // Examples
 // toCamelCase("the-stealth-warrior") // returns "theStealthWarrior"
 
+// TODO:
 // toCamelCase("The_Stealth_Warrior") // returns "TheStealthWarrior"
 
 // you're going to need to replace certain characters with nothing to create camel casing
@@ -195,7 +196,10 @@ function sortArray2(array) {
 // you'll need to check if the first word of the string was passed in as capitalized. it should stay that way if so
 
 function toCamelCase(string) {
-  //let re1 = new RegExp("-_");
-  let newString = string.replace(/-_/g, "");
+  let newString = string.split(/[-_]/g);
+  //let newString = string.replace(/[-_]/g, "");
   console.log(newString);
+   if (newString.inculdes(/[A-Z]/)) {
+     console.log(newString.join(' '));
+   } 
 }
