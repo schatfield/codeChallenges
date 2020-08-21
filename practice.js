@@ -196,14 +196,29 @@ function sortArray2(array) {
 // you'll need to check if the first word of the string was passed in as capitalized. it should stay that way if so
 
 //**** */ I think you're going to need to use map and utilize the args that come with that method includng the array index ****
+// Call back function () => {}
 
 function toCamelCase(string) {
-  let newString = string.split(/[-_]/g);
-  //let newString = string.replace(/[-_]/g, "");
-  console.log(newString);
-   if (newString[0]!== newString[0].toLowerCase()) {
-     console.log(newString.join(''));
-   } 
+  let newArray = string.split(/[-_]/g);
+  console.log(newArray);
+
+  function splitNewArray(word, i) {
+    // Split the word into an array
+    let wordArray =word.split("");
+    console.log(wordArray, i);
+     wordArray.map(letter => {
+      
+    });
+    // Map over each letter and capitalize first letter
+    // Join the array back together
+    // Return the word
+  }
+  newArray = newArray.map(splitNewArray);
+
+  
+  //  if (newArray[0]!== newArray[0].toLowerCase()) {
+  //    console.log(newArray.join(''));
+  //  } 
 }
 
 // function isCapital(array) {
@@ -211,3 +226,6 @@ function toCamelCase(string) {
 // }
  
 // return stringToArray.filter(isCapital);
+
+
+
