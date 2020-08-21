@@ -204,14 +204,20 @@ function toCamelCase(string) {
 
   function splitNewArray(word, i) {
     // Split the word into an array
-    let wordArray =word.split("");
+    let wordArray = word.split("");
     console.log(wordArray, i);
-     wordArray.map(letter => {
-      
-    });
     // Map over each letter and capitalize first letter
-    // Join the array back together
+     wordArray.map(letter => {
+      if (i === 0) {
+        return letter.toUpperCase();
+      } else {
+        return letter.toLowerCase();
+      }
+  });
+  // Join the array back together
+    word = wordArray.join("");
     // Return the word
+    return word;
   }
   newArray = newArray.map(splitNewArray);
 
