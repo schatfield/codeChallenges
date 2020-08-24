@@ -211,15 +211,18 @@ function toCamelCase(string) {
 
     // Map over each letter and capitalize first letter
      letterArray = letterArray.map(letter => {       
-      if (i === 0)  {         
-        console.log(letter);       
-        return letter;        
+      if (i === 0)  {    
+        if (letter[i] === /[a-zA-Z]/) {
+          console.log(i)
+          return letter;
+        }      
+        return letter.toLowerCase();        
       } else if ((letter === letterArray[0])) {
         return letter.toUpperCase();
       } else {
         return letter.toLowerCase();
       }
-    });
+    }, i);
     
     // Join the array back together
     // Return the word
