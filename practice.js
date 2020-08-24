@@ -199,43 +199,41 @@ function sortArray2(array) {
 // Call back function () => {}
 
 function toCamelCase(string) {
-  let newArray = string.split(/[-_]/g);
-  console.log(newArray);
+
+  let wordArray = string.split(/[-_]/g);
+  // Mapping over each word
+  let wordSplitArray = wordArray.map(splitNewArray);
 
   function splitNewArray(word, i) {
     // Split the word into an array
-    let wordArray = word.split("");
-    console.log(wordArray, i);
+    let letterArray = word.split("");
+    console.log(letterArray, i);
+
     // Map over each letter and capitalize first letter
-     wordArray.map(letter => {
-       //console.log(word, letter);
-      if (letter === wordArray[0]) {
-        //console.log(letter);
-
+     letterArray = letterArray.map(letter => {       
+      if (i === 0)  { 
+        if (letter !== letterArray[0]) {
+          return letter.toLowerCase();
+        }   
+        return letter;        
+      } else if ((letter === letterArray[0])) {
         return letter.toUpperCase();
-      // } else {
-      //   return letter.toLowerCase();
-      // }
-  }});
-  // Join the array back together
-    //word = wordArray.join("");
+      } else {
+        return letter.toLowerCase();
+      }
+    }, i);
+    
+    // Join the array back together
     // Return the word
-    //return word;
+      return letterArray.join("");
   }
+  //debugger;
+  console.log("wordArray: ", wordSplitArray.join(""));
+  return wordSplitArray.join("");
   
-  newArray = newArray.map(splitNewArray);
-
-  
-  //  if (newArray[0]!== newArray[0].toLowerCase()) {
-  //    console.log(newArray.join(''));
-  //  } 
 }
 
-// function isCapital(array) {
-//   array[0] !== array[0].toLowerCase()
-// }
- 
-// return stringToArray.filter(isCapital);
+
 
 
 
